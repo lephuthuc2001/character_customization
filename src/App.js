@@ -27,9 +27,6 @@ function App() {
     randomHandler(true);
   }, []);
   const randomHandler = (isRandom) => {
-    if (isRandom) {
-      console.log("love");
-    }
     const randomSet = [];
     for (const type in total) {
       const randomItem = Math.floor(Math.random() * total[type]);
