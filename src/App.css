@@ -1,0 +1,116 @@
+.App {
+  display: grid;
+  grid-template-columns: 0.6fr 1.2fr 0.6fr;
+  /* grid-template-rows: 1fr 10fr; */
+  grid-template-areas: "category display options";
+}
+h1 {
+  color: #ffffff;
+  margin: 10px 0 10px 0;
+  font-family: "Luminari", fantasy;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+/* .game-title {
+  grid-area: header;
+  text-align: center;
+} */
+.category {
+  grid-area: category;
+  align-self: center;
+  justify-self: center;
+}
+
+.display {
+  grid-area: display;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.options {
+  grid-area: options;
+  max-width: 70%;
+  width: 400px;
+  align-self: center;
+  justify-self: center;
+}
+
+button {
+  background: rgb(9, 9, 121);
+  background: radial-gradient(
+    circle,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(7, 121, 148, 1) 0%,
+    rgba(5, 66, 98, 1) 70%,
+    rgba(3, 33, 67, 1) 100%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font: inherit;
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  filter: brightness(120%);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(9, 9, 121);
+  background: radial-gradient(
+    circle,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(7, 121, 148, 1) 0%,
+    rgba(7, 115, 143, 1) 71%,
+    rgba(5, 66, 98, 1) 100%,
+    rgba(3, 33, 67, 1) 100%,
+    rgba(2, 0, 36, 1) 100%
+  );
+
+  border-radius: 10px;
+  height: 20px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+@media (width<950px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.1fr 0.3fr;
+    grid-template-areas: "display" "category" "options";
+  }
+  .category {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    padding: 5px 10px;
+  }
+  .options {
+    grid-area: options;
+    max-width: 100%;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+  }
+  h2 {
+    transform: scale(0.8, 0.8);
+    margin: 0 0 5px 0;
+  }
+}

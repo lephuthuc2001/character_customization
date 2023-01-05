@@ -1,0 +1,64 @@
+.avatar-holder {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+}
+
+.avatar-holder img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 90%;
+  width: 300px;
+  max-height: 90%;
+  height: 300px;
+}
+
+.body {
+  z-index: 0;
+}
+
+.clothing {
+  z-index: 1;
+}
+
+.mouths {
+  z-index: 2;
+}
+.eyes {
+  z-index: 2;
+}
+
+.eyebrows {
+  z-index: 2;
+}
+.glasses {
+  z-index: 3;
+}
+
+.hair {
+  z-index: 4;
+}
+
+.hats {
+  z-index: 1000;
+}
+
+.earrings {
+  z-index: 3;
+}
+.neckwear {
+  z-index: 20;
+}
+@media (width<950px) {
+  .avatar-holder img {
+    transform: scale(0.9, 0.9);
+    width: 100%;
+    height: 100%;
+  }
+}
